@@ -1,0 +1,10 @@
+@use "../utils" as *;
+
+.container{
+    display: grid;
+    grid-template-columns: minmax(17px, 1fr) minmax(0px, 94px) minmax(1px, 950px) minmax(0px, 94px) minmax(17px, 1fr);
+    grid-template-rows: auto;
+
+    row-gap: 139px;
+    min-height: 100%;
+}

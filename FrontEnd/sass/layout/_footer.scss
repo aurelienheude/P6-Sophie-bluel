@@ -1,0 +1,18 @@
+@use "../utils" as *;
+
+footer{
+    grid-column: 1/6;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    align-self: end;
+
+    height: 60px;
+    
+    a{
+        padding-right: 107px;
+        font-weight: 300;
+    }
+}

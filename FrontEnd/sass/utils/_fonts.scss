@@ -1,0 +1,45 @@
+@use "./colors" as *;
+
+a{
+    font-family: "Work Sans";
+    font-size: 16px;
+    font-weight: 400;
+}
+
+h2{
+    font-family: 'Syne';
+    font-size: 30px;
+    font-weight: 700;
+    color: $green;
+    text-align: center;
+}
+
+p{
+    font-family: "Work Sans";
+    font-size: 14px;
+    font-weight: 400;
+    color: $black;
+}
+
+span{
+    font-family: "Work Sans";
+    font-size: 16px;
+    font-weight: 400;
+    color: $black;
+}
+
+label{
+    color: $blacksm;
+    font-family: "Work Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+figcaption{
+    color: $blacksm;
+    font-family: "Work Sans";
+    font-size: 13px;
+    font-weight: 400;
+}

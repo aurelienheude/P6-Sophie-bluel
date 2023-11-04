@@ -1,0 +1,33 @@
+@use "../utils" as *;
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    max-width: 379px;
+    width: 100%;
+    padding-top: 38px;
+    
+    &__grp{
+        display: flex;
+        flex-flow: row wrap;
+        gap: 7px;
+
+        label{
+            flex-basis: 100%;
+        }
+
+        input{
+            flex-basis: 100%;
+        }
+
+        textarea{
+            flex-basis: 100%;
+        }
+    }
+
+    .btn{
+        align-self: center;
+    }
+}

@@ -1,0 +1,436 @@
+@charset "UTF-8";
+a {
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-weight: 400;
+}
+
+h2 {
+  font-family: "Syne";
+  font-size: 30px;
+  font-weight: 700;
+  color: #1D6154;
+  text-align: center;
+}
+
+p {
+  font-family: "Work Sans";
+  font-size: 14px;
+  font-weight: 400;
+  color: #000000;
+}
+
+span {
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+}
+
+label {
+  color: #3D3D3D;
+  font-family: "Work Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+figcaption {
+  color: #3D3D3D;
+  font-family: "Work Sans";
+  font-size: 13px;
+  font-weight: 400;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+a:hover {
+  font-weight: 600;
+}
+
+li {
+  list-style: none;
+}
+
+textarea {
+  height: 174px;
+  padding: 15px;
+  border: none;
+  resize: none;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.09);
+  color: #000000;
+  font-family: "Work Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+textarea:focus {
+  outline: 1px solid rgba(0, 0, 0, 0.09);
+}
+
+input[type=text], input[type=password], input[type=email] {
+  height: 22px;
+  padding: 15px 15px 15px 16px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.09);
+  border: none;
+  color: #000000;
+  font-family: "Work Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
+  outline: 1px solid rgba(0, 0, 0, 0.09);
+}
+
+input[type=file] {
+  color: #306685;
+  text-align: center;
+  font-family: "Work Sans";
+  font-size: 14px;
+  font-weight: 500;
+}
+
+select {
+  padding: 15px;
+  height: 51px;
+  width: 100%;
+  appearance: none;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.09);
+  border: none;
+  color: #444;
+  font-family: "Work Sans";
+  font-size: 14px;
+  font-weight: 400;
+}
+select:focus {
+  outline: 1px solid rgba(0, 0, 0, 0.09);
+}
+
+option:first-child {
+  display: none;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 15px;
+  border-radius: 60px;
+  font-family: "Syne";
+  font-size: 14px;
+  font-weight: 700;
+  width: 179px;
+  cursor: pointer;
+  background: #1D6154;
+  color: #FFFFFF;
+  border: none;
+  transition: background 150ms;
+}
+.btn:hover {
+  background: #0E2F28;
+}
+
+.btnCategory {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 15px;
+  border-radius: 60px;
+  border: 1px solid #1D6154;
+  font-family: "Syne";
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  background: #1D6154;
+  color: #FFFFFF;
+}
+.btnCategory--inactive {
+  background: #FFFFFF;
+  color: #1D6154;
+  transition: background 100ms, color 100ms;
+}
+.btnCategory--inactive:hover {
+  background: #1D6154;
+  color: #FFFFFF;
+}
+
+.edit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  background: #000000;
+}
+.edit p {
+  padding: 22px 0px;
+  color: #FFFFFF;
+}
+
+footer {
+  grid-column: 1/6;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  align-self: end;
+  height: 60px;
+}
+footer a {
+  padding-right: 107px;
+  font-weight: 300;
+}
+
+header {
+  grid-column: 2/5;
+  padding-top: 50px;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+header nav li:nth-last-child(1) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header nav li:nth-last-child(1) img {
+  width: 22px;
+  height: 22px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: minmax(17px, 1fr) minmax(0px, 94px) minmax(1px, 950px) minmax(0px, 94px) minmax(17px, 1fr);
+  grid-template-rows: auto;
+  row-gap: 139px;
+  min-height: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 379px;
+  width: 100%;
+  padding-top: 38px;
+}
+.form__grp {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 7px;
+}
+.form__grp label {
+  flex-basis: 100%;
+}
+.form__grp input {
+  flex-basis: 100%;
+}
+.form__grp textarea {
+  flex-basis: 100%;
+}
+.form .btn {
+  align-self: center;
+}
+
+.overlay {
+  position: fixed;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.overlay .modal {
+  display: flex;
+  flex-direction: column;
+  margin: 0px auto;
+  padding: 26px 30px 55px 30px;
+  width: 630px;
+  border: none;
+  border-radius: 10px;
+  background: #FFFFFF;
+}
+.overlay .modal__headerControls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.overlay .modal__headerControls svg {
+  cursor: pointer;
+}
+.overlay .modal__title {
+  padding-top: 10px;
+  color: #000000;
+  text-align: center;
+  font-family: "Work Sans";
+  font-size: 26px;
+  font-weight: 400;
+}
+.overlay .modal__content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  gap: 9px;
+  padding: 26px 75px 67px 75px;
+}
+.overlay .modal__content > div:nth-child(2) {
+  margin-top: 11px;
+}
+.overlay .modal__content > div:nth-child(3) {
+  margin-top: 15px;
+}
+.overlay .modal__content .worksEdit {
+  flex-basis: 18%;
+  height: 102px;
+  padding-top: 20px;
+  object-fit: cover;
+}
+.overlay .modal__content .upload {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 7px;
+  padding: 19px 0px;
+  width: 100%;
+  background: #E8F1F6;
+}
+.overlay .modal__content .upload span {
+  color: #444;
+  text-align: center;
+  font-family: "Work Sans";
+  font-size: 10px;
+  font-weight: 400;
+}
+.overlay .modal__content .form__grp {
+  width: 100%;
+}
+.overlay .modal__content .form__grp input {
+  color: #444;
+  font-family: "Work Sans";
+  font-size: 14px;
+  font-weight: 400;
+}
+.overlay .modal__content .form__grp:last-child {
+  position: relative;
+}
+.overlay .modal__content .form__grp:last-child::before {
+  position: absolute; /* Utilisez "absolute" au lieu de "relative" */
+  content: "\f078"; /* Remplacez par le caractère Unicode de l'icône que vous souhaitez */
+  bottom: 18px;
+  right: 27px;
+  font-family: "Font Awesome 6 Free"; /* Remplacez par le nom de la famille de police Font Awesome que vous utilisez */
+  font-weight: 900; /* L'épaisseur de la police dépend de l'icône que vous utilisez */
+  font-size: 14px; /* Personnalisez la taille de l'icône */
+  color: #6C6C6C; /* Personnalisez la couleur de l'icône */
+}
+.overlay .modal__content::after {
+  content: "";
+  bottom: 0;
+  left: 0;
+  transform: translateY(67px);
+  width: 100%;
+  height: 1px;
+  background: #B3B3B3;
+}
+.overlay .modal .btn {
+  align-self: center;
+  margin-top: 38px;
+  padding: 10px 49px;
+  width: auto;
+}
+
+main {
+  grid-column: 3/4;
+}
+main #description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 72px;
+}
+main #description article {
+  display: flex;
+  flex-direction: column;
+}
+main #description article h2 {
+  text-align: left;
+}
+main #description article p {
+  padding-top: 19px;
+}
+main #description img {
+  max-width: 474px;
+  height: 100%;
+}
+main #project {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 51px;
+  padding-top: 139px;
+}
+main #project .filtersbtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+main #project .projectGallery {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 18px;
+}
+main #project .projectGallery figure {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7px;
+  flex-basis: 32%;
+}
+main #project .projectGallery figure img {
+  height: 100%;
+  width: 100%;
+}
+main #contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+}
+main #contact span {
+  padding-top: 9px;
+}
+
+.auth {
+  grid-column: 3/4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/*# sourceMappingURL=style.css.map */

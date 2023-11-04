@@ -5,7 +5,9 @@
   "main": "server.js",
   "scripts": {
     "start": "node server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ../frontend/sass/main.scss ../frontend/assets/css/style.css",
+    "minify": "sass --style--compress ../frontend/sass/main.scss ../frontend/assets/css/style.css"
   },
   "author": "",
   "license": "ISC",
@@ -23,6 +25,7 @@
     "yamljs": "^0.3.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "prettier": "3.0.3"
   }
 }

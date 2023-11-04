@@ -1,0 +1,57 @@
+@use "../utils" as *;
+
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 15px;
+
+    border-radius: 60px;
+
+    font-family: "Syne";
+    font-size: 14px;
+    font-weight: 700;
+    width: 179px;
+    cursor: pointer;
+
+    background: $green;
+    color: $white;
+    
+    border: none;
+    transition: background 150ms;
+    
+    &:hover{
+        background: $greenDark;
+    }
+}
+
+.btnCategory{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 15px;
+
+    border-radius: 60px;
+
+    border: 1px solid $green;
+
+    font-family: "Syne";
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    background: $green;
+    color: $white;
+
+    &--inactive{
+        background: $white;
+        color: $green;
+
+        transition: background 100ms, color 100ms;
+        &:hover{
+            background: $green;
+            color: $white;
+        }
+    }
+}

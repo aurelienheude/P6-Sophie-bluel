@@ -1,0 +1,16 @@
+@use "../utils" as *;
+
+.edit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 11px;
+
+    background: $black;
+
+    p{
+        padding: 22px 0px;
+        color: $white;
+    }
+}

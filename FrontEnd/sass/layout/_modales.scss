@@ -1,0 +1,145 @@
+@use "../utils" as *;
+
+.overlay {
+    position: fixed;
+    z-index: 3;
+
+    display: flex;
+    align-items: center;
+    
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.5);
+
+    .modal{
+        display: flex;
+        flex-direction: column;
+        
+        margin: 0px auto;
+        padding: 26px 30px 55px 30px;
+    
+        width: 630px;
+    
+        border: none;
+        border-radius: 10px;
+    
+        background: $white;
+    
+        &__headerControls{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+    
+            width: 100%;
+    
+            svg{
+                cursor: pointer;
+            }
+        }
+    
+        &__title{
+            padding-top: 10px;
+            
+            color: $black;
+            text-align: center;
+            font-family: "Work Sans";
+            font-size: 26px;
+            font-weight: 400;
+        }
+    
+        &__content{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+    
+            gap: 9px; 
+    
+            padding: 26px 75px 67px 75px;
+    
+            & > div:nth-child(2){
+                margin-top: 11px;
+            }
+            & > div:nth-child(3){
+                margin-top: 15px;
+            }
+            .worksEdit{
+                flex-basis: 18%;
+    
+                height: 102px;
+                padding-top: 20px;
+    
+                object-fit: cover;
+            }
+    
+            .upload{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+    
+                gap: 7px;
+    
+                padding: 19px 0px;
+                width: 100%;
+    
+                background: #E8F1F6;
+    
+                span{
+                    color: #444;
+                    text-align: center;
+                    font-family: "Work Sans";
+                    font-size: 10px;
+                    font-weight: 400;
+                }
+            }
+    
+            .form__grp{
+                width: 100%;
+                
+                input{
+                    color: #444;
+                    font-family: "Work Sans";
+                    font-size: 14px;
+                    font-weight: 400;
+                }
+                &:last-child{
+                    position: relative;
+    
+                    &::before {
+                        position: absolute; /* Utilisez "absolute" au lieu de "relative" */
+                        content: "\f078"; /* Remplacez par le caractère Unicode de l'icône que vous souhaitez */
+    
+                        bottom: 18px;
+                        right: 27px;
+    
+                        font-family: "Font Awesome 6 Free"; /* Remplacez par le nom de la famille de police Font Awesome que vous utilisez */
+                        font-weight: 900; /* L'épaisseur de la police dépend de l'icône que vous utilisez */
+                        font-size: 14px; /* Personnalisez la taille de l'icône */
+    
+                        color: #6C6C6C; /* Personnalisez la couleur de l'icône */
+                    }
+                }
+            }
+    
+            &::after{
+                content: "";
+                bottom: 0;
+                left: 0;
+                transform: translateY(67px);
+                width: 100%;
+                height: 1px;
+                background: #B3B3B3;
+            }
+        }
+        .btn{
+            align-self: center;
+    
+            margin-top: 38px;
+            padding: 10px 49px;
+    
+            width: auto;
+        }
+    }
+}
+
