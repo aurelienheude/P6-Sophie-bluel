@@ -33,7 +33,7 @@ class API {
     } catch (error) {
       throw new Error(`Erreur de la requête POST : ${error.message}`);
     }
-  }/*
+  }
 
   // Méthode pour effectuer une requête DELETE
   async delete(endpoint) {
@@ -48,7 +48,7 @@ class API {
     } catch (error) {
       throw new Error(`Erreur de la requête DELETE : ${error.message}`);
     }
-  }*/
+  }
 }
 
 export default API;

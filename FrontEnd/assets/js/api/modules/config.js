@@ -1,4 +1,4 @@
-import API from "./fetcher.js";
+import API from "./api.js";
 
 const apiUrl = new API('http://localhost:5678/api');
 
