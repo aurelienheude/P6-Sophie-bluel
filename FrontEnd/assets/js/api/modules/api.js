@@ -12,7 +12,7 @@ class API {
       }
       return response.json();
     } catch (error) {
-      throw new Error(`Erreur de la requête GET : ${error.message}`);
+      console.error(error.message);
     }
   }
 
@@ -31,7 +31,7 @@ class API {
       }
       return response.json();
     } catch (error) {
-      throw new Error(`Erreur de la requête POST : ${error.message}`);
+      console.error(error.message);
     }
   }
 
@@ -46,7 +46,7 @@ class API {
       }
       return response.json();
     } catch (error) {
-      throw new Error(`Erreur de la requête DELETE : ${error.message}`);
+      console.error(error.message);
     }
   }
 }
