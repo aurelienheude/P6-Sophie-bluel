@@ -38,6 +38,14 @@ main{
         gap: 51px;
         padding-top: 139px;
 
+        .projectTitle{
+            display: flex;
+            justify-content: center;
+
+            position: relative;
+            
+        }
+
         .filtersbtn{
             display: flex;
             align-items: center;

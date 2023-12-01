@@ -14,3 +14,16 @@
         color: $white;
     }
 }
+
+.editProject{
+    display: flex;
+    align-self: center;
+    
+    position: absolute;
+    right: 29%;
+    cursor: pointer;
+    
+    &:hover p{
+        font-weight: bold;
+    }
+}
