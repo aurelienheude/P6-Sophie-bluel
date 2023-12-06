@@ -10,6 +10,7 @@
     
         <link rel="stylesheet" href="assets/css/style.css">
         <meta name="description" content="Designer d'espace je raconte votre histoire, je valorise vos idées. Je vous accompagne de la conception à la livraison finale du chantier.">
+        <script type="module" src="assets/js/api/components/auth/loginForm.js"></script>
     </head>
 <body>
     <div class="container">
@@ -37,9 +38,9 @@
                 </div>
                 <div class="form__grp">
                     <label>Mot de passe</label>
-                    <input type="password" name="password" required="required" />
+                    <input type="password" name="password" required="required" autocomplete/>
                 </div>
-                <input class="btn" type="submit" value="Se connecter">
+                <input class="btn" value="Se connecter" type="submit">
             </form>
         </div>
         <footer>
@@ -48,7 +49,5 @@
             </nav>
         </footer>
     </div>
-
-    <script type="module" src="assets/js/api/components/auth/login.js" defer></script>
 </body>
 </html>

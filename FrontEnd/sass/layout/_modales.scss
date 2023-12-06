@@ -75,9 +75,14 @@
                 height: 102px;
                 padding-top: 20px;
 
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
                 svg {
                     position: absolute;
-                    right: 17px;
+                    right: 7px;
                     top: 27px;
 
                     cursor: pointer;
@@ -94,11 +99,17 @@
 
                 gap: 7px;
 
-                padding: 19px 0px;
+                height: 170px;
                 width: 100%;
 
                 background: #E8F1F6;
 
+                .newWorkImgPreview{
+                    height: 100%;
+                    width: auto;
+                    object-fit: cover;
+                }
+                
                 span {
                     color: #444;
                     text-align: center;

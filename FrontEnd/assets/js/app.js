@@ -1,19 +1,10 @@
-import { viewWorks } from "./api/components/project/project.js";
-import { viewCategories } from "./api/components/category/category.js";
+import { viewWorks } from "./api/components/projects/viewWorks.js";
+import { viewCategories } from "./api/components/projects/categoriesFilter.js";
+import { checkUserAuthentification } from "./api/components/auth/checkUserAuthentification.js";
 
-/*
-monAPI.post('/users/login', { key: 'valeur' })
-  .then(data => {
-    // Gérer la réponse de la requête POST
-  })
-  .catch(error => {
-    console.error(error);
-  });
+document.addEventListener('DOMContentLoaded', async () => {
+    await viewCategories();
+    await viewWorks();
+    checkUserAuthentification();
+});
 
-monAPI.delete(`/works/${id}`)
-  .then(data => {
-    // Gérer la réponse de la requête DELETE
-  })
-  .catch(error => {
-    console.error(error);
-  });*/
