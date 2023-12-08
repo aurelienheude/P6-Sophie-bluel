@@ -1,0 +1,78 @@
+@use "../utils" as *;
+
+textarea{
+    height: 174px;
+    padding: 15px;
+
+    border: none;
+    resize: none;
+
+    background: $white;
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.09);
+
+    color: $black;
+    font-family: "Work Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    &:focus{
+        outline: 1px solid rgba(0, 0, 0, 0.09);
+    }
+}
+
+input[type=text], input[type=password], input[type=email]{
+    height: 22px;
+    padding: 15px 15px 15px 16px;
+    background: $white;
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.09);
+
+    border: none;
+
+    color: $black;
+    font-family: "Work Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    &:focus{
+        outline: 1px solid rgba(0, 0, 0, 0.09);
+    }
+}
+
+input[type=file]{
+    color: #306685;
+    text-align: center;
+    font-family: "Work Sans";
+    font-size: 14px;
+    font-weight: 500;
+}
+
+select{
+    padding: 15px;
+    height: 51px;
+
+    width: 100%;
+
+    appearance: none;
+
+    background: $white;
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.09);
+    border: none;
+
+    color: #444;
+
+    font-family: "Work Sans";
+    font-size: 14px;
+    font-weight: 400;
+
+    &:focus{
+        outline: 1px solid rgba(0, 0, 0, 0.09);
+    }
+}
+
+option:first-child{
+    display: none;
+}
