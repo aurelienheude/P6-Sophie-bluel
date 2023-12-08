@@ -1,7 +1,7 @@
 import { viewWorksModal } from "./works/viewWorksModal.js";
 import { viewCategoriesOption } from "./upload/viewCategoriesUpload.js";
 import { deleteWorkHandler } from "./works/deleteWorks.js";
-import { addWorkForm } from "./upload/addWorks.js";
+import { btnFormValidation } from "./upload/addWorks.js";
 
 const closeModal = () => {
     const closeModalBtn = document.getElementById("closeModal");
@@ -92,7 +92,7 @@ const changeToUploadModal = () => {
                 <div class='fakeBtnUpload'>+ Ajouter une photo<input type='file' accept='image/*' placeholder=''></div>
                 <span>jpg, png : 4mo max</span>
             </div>
-            <div class='form__grp'>
+            <div class='form__grp' id='workTitleGrp'>
                 <label for='text'>Titre</label>
                 <input type='text' id='workTitle' />
             </div>
@@ -110,8 +110,7 @@ const changeToUploadModal = () => {
 
     document.body.insertAdjacentHTML('afterbegin', uploadModal);
     viewCategoriesOption();
-    //addWorks();
-    addWorkForm();
+    btnFormValidation();
 
     const headerControls = document.querySelector(".modal__headerControls");
     headerControls.style.justifyContent = "space-between";

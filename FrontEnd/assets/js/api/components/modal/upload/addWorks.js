@@ -1,56 +1,16 @@
 import { apiUrl } from "../../../modules/config.js";
+import { imgUploadVerification } from "./imgUpload.js";
+import { titleWorkUpload } from './titleWorkUpload.js';
+import { categorieWorkUpload } from "./categorieWork.upload.js";
 
 const addWork = async (uploadFormData) => {
     const addWork = await apiUrl.post('/works', uploadFormData);
 };
 
-const uploadVerfification = () => {
-    const workUploadFile = document.querySelector(".modal__content input[type=file]").files[0];
-    const workCategorie = document.querySelector(".modal__content select").value;
-    const workTitle = document.getElementById("workTitle").value;
-
-    if(workTitle){
-        // il y a du texte
-    }else{
-        console.log("champs titre vide");
-    }
-
-    if(workCategorie != "option1"){
-        // il y a une option
-    }else{
-        console.log("catégorie non selectionné");
-    }
-
-    if(workUploadFile){
-        
-        imgUploadVerification(workUploadFile);
-    }else{
-        console.log("fichier non selectionné");
-    }
-};
-
-const imgUploadVerification = (workUploadFile) => {
-    
-    if(workUploadFile.size < 4194304){
-        
-        if(workUploadFile.type === "image/jpeg" || workUploadFile.type === "image/png" || workUploadFile.type === "image/jpg"){
-            console.log("extension de fichier ok");
-            console.log(workUploadFile.type);
-        }else{
-            console.log(`le type ${workUploadFile.type} n'est pas une image jpeg,png,jpg.`)
-        }
-    }else{
-        console.log(`votre fichier est trop volumineux ! 4 mo Maximum`);
-    }
-};
-
 export const addWorkForm = () => {
-
     const addWorkBtn = document.querySelector("#addWorkValidate");
     addWorkBtn.addEventListener("click", () => {
-
-        uploadVerfification();
-
+        console.log("j'ajoute un super work");
         const uploadFormData = new FormData();
 
         /*uploadFormData.append("image", workUploadFile);
@@ -58,4 +18,32 @@ export const addWorkForm = () => {
         uploadFormData.append("title", workTitle);
         addWork(uploadFormData);*/
     });
+};
+
+const uploadVerification = () => {
+    const titleResult = titleWorkUpload();
+    const imgUploadResult = imgUploadVerification();
+    const categorieResult = categorieWorkUpload();
+
+    return titleResult && imgUploadResult && categorieResult;
+};
+
+export const isChampFull = (toto, titi, proute) => {
+    console.log(toto, titi, proute);
+}
+export const btnFormValidation = () => {
+    const btnAddWorkValidation = document.querySelector("#addWorkValidate");
+    
+    btnAddWorkValidation.setAttribute("disabled", true);
+    const isValid = uploadVerification();
+
+    if (isValid) {
+        console.log("c'est valide");
+        btnAddWorkValidation.style.background = "green";
+        btnAddWorkValidation.style.cursor = "pointer";
+    } else if(!isValid){
+        console.log("c'est pas valide");
+        btnAddWorkValidation.style.background = "grey";
+        btnAddWorkValidation.style.cursor = "not-allowed";
+    }
 };

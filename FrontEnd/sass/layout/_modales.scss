@@ -104,10 +104,11 @@
 
                 background: #E8F1F6;
 
-                .newWorkImgPreview{
+                img{
                     height: 100%;
-                    width: auto;
+                    max-width: 129px;
                     object-fit: cover;
+                    object-position: center;
                 }
                 
                 span {
