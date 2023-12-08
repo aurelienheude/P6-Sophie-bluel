@@ -365,12 +365,14 @@ header nav li:nth-last-child(1) img {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  position: relative;
   gap: 7px;
   height: 170px;
   width: 100%;
   background: #E8F1F6;
 }
 .overlay .modal__content .upload img {
+  position: absolute;
   height: 100%;
   max-width: 129px;
   object-fit: cover;
@@ -484,6 +486,7 @@ main #project .projectGallery figure {
 main #project .projectGallery figure img {
   height: 100%;
   width: 100%;
+  object-fit: cover;
 }
 main #contact {
   display: flex;

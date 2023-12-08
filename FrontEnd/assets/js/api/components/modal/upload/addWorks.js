@@ -7,43 +7,56 @@ const addWork = async (uploadFormData) => {
     const addWork = await apiUrl.post('/works', uploadFormData);
 };
 
-export const addWorkForm = () => {
+export const addWorkForm = (uploadedWork) => {
     const addWorkBtn = document.querySelector("#addWorkValidate");
+
     addWorkBtn.addEventListener("click", () => {
-        console.log("j'ajoute un super work");
+        imgUploadVerification();
         const uploadFormData = new FormData();
 
-        /*uploadFormData.append("image", workUploadFile);
-        uploadFormData.append("category", parseInt(workCategorie));
-        uploadFormData.append("title", workTitle);
-        addWork(uploadFormData);*/
+        uploadFormData.append("image", uploadedWork.file);
+        uploadFormData.append("category", uploadedWork.categorie);
+        uploadFormData.append("title", uploadedWork.title);
+
+        console.log(uploadedWork.categorie, uploadedWork.title, uploadedWork.file)
+        addWork(uploadFormData);
     });
 };
 
-const uploadVerification = () => {
-    const titleResult = titleWorkUpload();
-    const imgUploadResult = imgUploadVerification();
-    const categorieResult = categorieWorkUpload();
+export const isChampFull = () => {
+    const workTitle = document.getElementById("workTitle");
+    const workCategorie = document.querySelector(".modal__content select");
+    const imgUploadInput = document.querySelector(".modal__content > .upload > img");
+    const uploadFile = document.querySelector("#modalUpload > dialog > form > div.upload > div > input[type=file]");
+    const btnAddWorkValidation = document.querySelector("#addWorkValidate");
 
-    return titleResult && imgUploadResult && categorieResult;
-};
+    if(workTitle.value.length > 1 && workCategorie.value !== "option1" && workCategorie.value && imgUploadInput){
+        btnAddWorkValidation.removeAttribute("disabled");
+        btnAddWorkValidation.style.background = "#1D6154";
+        btnAddWorkValidation.style.cursor = "pointer";
 
-export const isChampFull = (toto, titi, proute) => {
-    console.log(toto, titi, proute);
+        const uploadedWork = {
+            title: workTitle.value,
+            categorie: parseInt(workCategorie.value),
+            file: uploadFile.files[0]
+        };
+
+        addWorkForm(uploadedWork);
+    }else{
+        btnAddWorkValidation.setAttribute("disabled", true);
+        btnAddWorkValidation.style.background = "grey";
+        btnAddWorkValidation.style.cursor = "not-allowed";
+    }
 }
+
 export const btnFormValidation = () => {
     const btnAddWorkValidation = document.querySelector("#addWorkValidate");
     
     btnAddWorkValidation.setAttribute("disabled", true);
-    const isValid = uploadVerification();
+    btnAddWorkValidation.style.background = "grey";
+    btnAddWorkValidation.style.cursor = "not-allowed";
 
-    if (isValid) {
-        console.log("c'est valide");
-        btnAddWorkValidation.style.background = "green";
-        btnAddWorkValidation.style.cursor = "pointer";
-    } else if(!isValid){
-        console.log("c'est pas valide");
-        btnAddWorkValidation.style.background = "grey";
-        btnAddWorkValidation.style.cursor = "not-allowed";
-    }
+    titleWorkUpload();
+    imgUploadVerification();
+    categorieWorkUpload();
 };

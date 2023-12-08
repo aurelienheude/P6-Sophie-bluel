@@ -95,8 +95,11 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+
                 flex-direction: column;
 
+                position: relative;
+                
                 gap: 7px;
 
                 height: 170px;
@@ -105,6 +108,7 @@
                 background: #E8F1F6;
 
                 img{
+                    position: absolute;
                     height: 100%;
                     max-width: 129px;
                     object-fit: cover;

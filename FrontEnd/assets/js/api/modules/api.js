@@ -81,7 +81,6 @@ class API {
 			if (!response.ok) {
 				throw new Error(`Erreur HTTP, statut ${response.status}`);
 			}
-			return response.json();
 		} catch (error) {
 			console.error(error.message);
 		}
