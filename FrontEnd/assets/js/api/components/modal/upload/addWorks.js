@@ -18,7 +18,6 @@ export const addWorkForm = (uploadedWork) => {
         uploadFormData.append("category", uploadedWork.categorie);
         uploadFormData.append("title", uploadedWork.title);
 
-        console.log(uploadedWork.categorie, uploadedWork.title, uploadedWork.file)
         addWork(uploadFormData);
     });
 };

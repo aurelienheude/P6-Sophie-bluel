@@ -12,11 +12,11 @@ export const imgUploadVerification = () => {
             if (workUploadFile.size < 4194304) {
                 if (workUploadFile.type === "image/jpeg" || workUploadFile.type === "image/png" || workUploadFile.type === "image/jpg") {
                     showImagePreview(workUploadFile);
-    
+
                     imgUploadInput.addEventListener('input', function erasedErrorMessage() {
                         errorMessageModal(".upload", "");
                     });
-    
+
                     return workUploadFile;
                 }else {
                     errorMessageModal(".upload", `Le type ${workUploadFile.type} n'est pas une image JPEG, PNG, JPG.`);
