@@ -18,7 +18,6 @@ export const addWorkForm = (uploadedWork) => {
         uploadFormData.append("category", uploadedWork.categorie);
         uploadFormData.append("title", uploadedWork.title);
 
-        console.log(uploadedWork.categorie, uploadedWork.title, uploadedWork.file)
         addWork(uploadFormData);
     });
 };
@@ -30,7 +29,7 @@ export const isChampFull = () => {
     const uploadFile = document.querySelector("#modalUpload > dialog > form > div.upload > div > input[type=file]");
     const btnAddWorkValidation = document.querySelector("#addWorkValidate");
 
-    if(workTitle.value.length > 1 && workCategorie.value !== "option1" && workCategorie.value && imgUploadInput){
+    if (workTitle.value.length > 1 && workCategorie.value !== "option1" && workCategorie.value && imgUploadInput) {
         btnAddWorkValidation.removeAttribute("disabled");
         btnAddWorkValidation.style.background = "#1D6154";
         btnAddWorkValidation.style.cursor = "pointer";
@@ -42,7 +41,7 @@ export const isChampFull = () => {
         };
 
         addWorkForm(uploadedWork);
-    }else{
+    } else {
         btnAddWorkValidation.setAttribute("disabled", true);
         btnAddWorkValidation.style.background = "grey";
         btnAddWorkValidation.style.cursor = "not-allowed";
@@ -51,7 +50,7 @@ export const isChampFull = () => {
 
 export const btnFormValidation = () => {
     const btnAddWorkValidation = document.querySelector("#addWorkValidate");
-    
+
     btnAddWorkValidation.setAttribute("disabled", true);
     btnAddWorkValidation.style.background = "grey";
     btnAddWorkValidation.style.cursor = "not-allowed";

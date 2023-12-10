@@ -1,5 +1,5 @@
 import { apiUrl } from '../../modules/config.js';
-import {createBtnCategories} from './createCategorieElements.js';
+import { createBtnCategories } from './createCategorieElements.js';
 import { createWorkElement } from './createWorkElements.js';
 
 let CategorieTargeting = '';
