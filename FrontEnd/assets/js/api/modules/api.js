@@ -56,7 +56,7 @@ class API {
 
 		} catch (error) {
 			const errorNodeMessage = document.querySelector(".form p");
-			
+
 			if (!errorNodeMessage) {
 				errorNodeMessage.innerHTML = "";
 			} else {

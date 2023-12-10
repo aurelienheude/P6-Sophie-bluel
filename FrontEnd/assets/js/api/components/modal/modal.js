@@ -13,7 +13,7 @@ const closeModal = () => {
 };
 
 const changeModalBtn = (modal) => {
-    if(modal === 'deleteWorks'){
+    if (modal === 'deleteWorks') {
         const btnAddWork = document.getElementById("addWork");
 
         btnAddWork.addEventListener("click", () => {
@@ -21,7 +21,7 @@ const changeModalBtn = (modal) => {
             overlay.remove();
             changeToUploadModal();
         });
-    }else if(modal === 'uploadWorks'){
+    } else if (modal === 'uploadWorks') {
         const btnAddWork = document.getElementById("deleteWorkModal");
 
         btnAddWork.addEventListener("click", () => {
