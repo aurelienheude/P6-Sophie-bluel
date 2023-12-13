@@ -5,6 +5,6 @@ import { checkUserAuthentification } from "./api/components/auth/checkUserAuthen
 document.addEventListener('DOMContentLoaded', async () => {
     await viewCategories();
     await viewWorks();
-    checkUserAuthentification();
+    await checkUserAuthentification();
 });
 

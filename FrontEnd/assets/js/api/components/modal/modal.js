@@ -63,7 +63,7 @@ export const changeToWorkModal = () => {
     }, 500);
 };
 
-const changeToUploadModal = () => {
+export const changeToUploadModal = () => {
     const uploadModal = `
     <div id='modalUpload' class='overlay'>
     <dialog class='modal'>

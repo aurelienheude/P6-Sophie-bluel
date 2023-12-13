@@ -47,6 +47,12 @@ figcaption {
   color: red;
 }
 
+.successText {
+  color: green;
+  text-align: center;
+  width: 100%;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -482,6 +488,8 @@ main #project .projectGallery figure {
   align-items: flex-start;
   gap: 7px;
   flex-basis: 32%;
+  height: 407px;
+  padding-top: 10px;
 }
 main #project .projectGallery figure img {
   height: 100%;

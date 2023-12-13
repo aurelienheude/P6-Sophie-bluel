@@ -12,6 +12,7 @@ class API {
 			return response.json();
 		} catch (error) {
 			console.error(error.message);
+			throw error;
 		}
 	}
 
@@ -34,6 +35,7 @@ class API {
 			return response.json();
 		} catch (error) {
 			console.error(error.message);
+			throw error;
 		}
 	}
 
@@ -55,16 +57,15 @@ class API {
 			window.location.href = "index.html";
 
 		} catch (error) {
-			const errorNodeMessage = document.querySelector(".form p");
+			const errorNodeMessage = document.querySelector(".form > p");
 
 			if (!errorNodeMessage) {
-				errorNodeMessage.innerHTML = "";
-			} else {
 				const nodeParent = document.querySelector(".form");
 				const newNodeElement = document.createElement("p");
 				newNodeElement.innerText = "Email ou mot de passe invalide";
 				nodeParent.appendChild(newNodeElement);
 			}
+			throw error;
 		}
 	}
 
@@ -83,6 +84,7 @@ class API {
 			}
 		} catch (error) {
 			console.error(error.message);
+			throw error;
 		}
 	}
 }

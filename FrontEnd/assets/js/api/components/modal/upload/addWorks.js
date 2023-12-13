@@ -2,6 +2,10 @@ import { apiUrl } from "../../../modules/config.js";
 import { imgUploadVerification } from "./imgUpload.js";
 import { titleWorkUpload } from './titleWorkUpload.js';
 import { categorieWorkUpload } from "./categorieWork.upload.js";
+import { successMessageModal } from "../sucessModal.js";
+import {changeToUploadModal} from '../modal.js';
+import { viewWorks } from "../../projects/viewWorks.js";
+import {refreshElement} from '../refreshElement.js';
 
 const addWork = async (uploadFormData) => {
     const addWork = await apiUrl.post('/works', uploadFormData);
@@ -10,15 +14,31 @@ const addWork = async (uploadFormData) => {
 export const addWorkForm = (uploadedWork) => {
     const addWorkBtn = document.querySelector("#addWorkValidate");
 
-    addWorkBtn.addEventListener("click", () => {
+    addWorkBtn.addEventListener("click", async () => {
         imgUploadVerification();
+
         const uploadFormData = new FormData();
 
         uploadFormData.append("image", uploadedWork.file);
         uploadFormData.append("category", uploadedWork.categorie);
         uploadFormData.append("title", uploadedWork.title);
 
-        addWork(uploadFormData);
+        await addWork(uploadFormData);
+
+        successMessageModal(".modal__content", "Nouveau projet créé !");
+
+        refreshElement(".projectGallery");
+        await viewWorks();
+        
+        setTimeout(() => {
+            const successMessageModal = document.querySelector(".modal__content > p");
+            const modal = document.querySelector(".overlay");
+
+            successMessageModal.remove();
+            modal.remove();
+
+            changeToUploadModal();
+        }, 1600);
     });
 };
 

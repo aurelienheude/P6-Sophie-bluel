@@ -22,6 +22,11 @@ const nodeParent = document.querySelector("body");
 const nodeParentEditProject = document.querySelector("#project > div.projectTitle");
 const logout = document.querySelector("body > div.container > header > nav > ul > li:nth-child(3) > a");
 
+const filterBtns = document.querySelector(".filtersbtn");
+filterBtns.style.visibility = "hidden";
+const projectSection = document.querySelector("#project");
+projectSection.style.gap = "22px";
+
 nodeParentEditProject.insertAdjacentHTML("beforeend", editProjectElement);
 nodeParent.insertAdjacentHTML('afterbegin', editBannerElement);
 logout.textContent = "logout";
